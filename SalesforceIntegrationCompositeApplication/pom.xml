@@ -9,6 +9,8 @@
   <name>SalesforceIntegrationCompositeApplication</name>
   <description>SalesforceIntegrationCompositeApplication</description>
   <properties>
+    <com.example.SalesforceDataService.dataservice_._SFMongoDBDataService>capp/DataServicesServer</com.example.SalesforceDataService.dataservice_._SFMongoDBDataService>
+    <com.example.SalesforceDataService.dataservice_._SFRDBMSDataService>capp/DataServicesServer</com.example.SalesforceDataService.dataservice_._SFRDBMSDataService>
     <com.example.SalesforceDataService.dataservice_._SalesforceData>capp/DataServicesServer</com.example.SalesforceDataService.dataservice_._SalesforceData>
     <artifact.types>jaggery/app=zip,synapse/priority-executor=xml,synapse/inbound-endpoint=xml,service/rule=aar,synapse/message-store=xml,event/stream=json,service/meta=xml,datasource/datasource=xml,synapse/proxy-service=xml,bpel/workflow=zip,synapse/sequence=xml,synapse/endpointTemplate=xml,carbon/application=car,wso2/gadget=dar,synapse/api=xml,synapse/event-source=xml,synapse/message-processors=xml,event/receiver=xml,lib/dataservice/validator=jar,synapse/template=xml,synapse/endpoint=xml,lib/carbon/ui=jar,lib/synapse/mediator=jar,event/publisher=xml,synapse/local-entry=xml,synapse/task=xml,webapp/jaxws=war,registry/resource=zip,synapse/configuration=xml,service/axis2=aar,synapse/lib=zip,synapse/sequenceTemplate=xml,event/execution-plan=siddhiql,service/dataservice=dbs,web/application=war,lib/library/bundle=jar</artifact.types>
     <com.example.SalesforceIntegration.sequence_._handleSFData>capp/EnterpriseServiceBus</com.example.SalesforceIntegration.sequence_._handleSFData>
@@ -25,6 +27,18 @@
       <artifactId>handleSFData</artifactId>
       <version>1.0.0</version>
       <type>xml</type>
+    </dependency>
+    <dependency>
+      <groupId>com.example.SalesforceDataService.dataservice</groupId>
+      <artifactId>SFMongoDBDataService</artifactId>
+      <version>1.0.0</version>
+      <type>dbs</type>
+    </dependency>
+    <dependency>
+      <groupId>com.example.SalesforceDataService.dataservice</groupId>
+      <artifactId>SFRDBMSDataService</artifactId>
+      <version>1.0.0</version>
+      <type>dbs</type>
     </dependency>
   </dependencies>
   <repositories>

@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?><artifacts>
-    <artifact name="SalesforceData" groupId="com.example.SalesforceDataService.dataservice" version="1.0.0" type="service/dataservice" serverRole="DataServicesServer">
-        <file>dataservice/SalesforceData.dbs</file>
+        <artifact name="SFRDBMSDataService" groupId="com.example.SalesforceDataService.dataservice" version="1.0.0" type="service/dataservice" serverRole="DataServicesServer">
+        <file>dataservice/SFRDBMSDataService.dbs</file>
+    </artifact>
+    <artifact name="SFMongoDBDataService" groupId="com.example.SalesforceDataService.dataservice" version="1.0.0" type="service/dataservice" serverRole="DataServicesServer">
+        <file>dataservice/SFMongoDBDataService.dbs</file>
     </artifact>
 </artifacts>
