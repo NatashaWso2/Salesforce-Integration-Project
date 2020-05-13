@@ -9,6 +9,7 @@
   <name>SalesforceDataService_module</name>
   <description>SalesforceDataService_module</description>
   <modules>
-    <module>artifacts/dataservice/SalesforceData</module>
+    <module>artifacts/dataservice/SFRDBMSDataService</module>
+    <module>artifacts/dataservice/SFMongoDBDataService</module>
   </modules>
 </project>

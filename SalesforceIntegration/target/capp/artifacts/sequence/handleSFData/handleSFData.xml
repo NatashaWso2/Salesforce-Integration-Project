@@ -1,2 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<sequence name="handleSFData" trace="disable" xmlns="http://ws.apache.org/ns/synapse"/>
+<sequence name="handleSFData" trace="disable" xmlns="http://ws.apache.org/ns/synapse">
+    <log level="full"/>
+    <property name="messageType" scope="axis2" type="STRING" value="application/json"/>
+    <header name="Accept" scope="transport" value="application/json"/>
+    <switch source="json-eval($.event.type)">
+        <case regex="created">
+            <payloadFactory media-type="json">
+                <format>{"account":{
+	"_id":"$1",
+	"accountNumber":"$2",
+	"accountName":"$3",
+	"ownerId":"$4",
+	"noEmplyess":"$5"
+}
+}</format>
+                <args>
+                    <arg evaluator="json" expression="$.sobject.Id"/>
+                    <arg evaluator="json" expression="$.sobject.AccountNumber"/>
+                    <arg evaluator="json" expression="$.sobject.Name"/>
+                    <arg evaluator="json" expression="$.sobject.OwnerId"/>
+                    <arg evaluator="json" expression="$.sobject.NumberOfEmployees"/>
+                </args>
+            </payloadFactory>
+            <call>
+                <endpoint key="MongoAddAccount"/>
+            </call>
+        </case>
+        <case regex="deleted">
+            <payloadFactory media-type="json">
+                <format>{"account":{"_id":"$1"}}</format>
+                <args>
+                    <arg evaluator="json" expression="$.sobject.Id"/>
+                </args>
+            </payloadFactory>
+            <call>
+                <endpoint key="MongoDeleteAccount"/>
+            </call>
+        </case>
+        <default>
+            <log level="custom">
+                <property name="event-type" value="invalid"/>
+            </log>
+            <drop/>
+        </default>
+    </switch>
+</sequence>

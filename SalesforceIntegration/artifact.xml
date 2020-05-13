@@ -2,4 +2,13 @@
     <artifact name="handleSFData" groupId="com.example.SalesforceIntegration.sequence" version="1.0.0" type="synapse/sequence" serverRole="EnterpriseServiceBus">
         <file>src/main/synapse-config/sequences/handleSFData.xml</file>
     </artifact>
+    <artifact name="SaleforceInboundEP" groupId="com.example.SalesforceIntegration.inbound-endpoint" version="1.0.0" type="synapse/inbound-endpoint" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/inbound-endpoints/SaleforceInboundEP.xml</file>
+    </artifact>
+    <artifact name="MongoDeleteAccount" groupId="com.example.SalesforceIntegration.endpoint" version="1.0.0" type="synapse/endpoint" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/endpoints/MongoDeleteAccount.xml</file>
+    </artifact>
+    <artifact name="MongoAddAccount" groupId="com.example.SalesforceIntegration.endpoint" version="1.0.0" type="synapse/endpoint" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/endpoints/MongoAddAccount.xml</file>
+    </artifact>
 </artifacts>

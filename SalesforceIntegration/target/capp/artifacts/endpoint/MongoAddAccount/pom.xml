@@ -2,12 +2,12 @@
 <project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <modelVersion>4.0.0</modelVersion>
-  <groupId>com.example.SalesforceDataService.dataservice</groupId>
-  <artifactId>SalesforceData</artifactId>
+  <groupId>com.example.SalesforceIntegration.endpoint</groupId>
+  <artifactId>MongoAddAccount</artifactId>
   <version>1.0.0</version>
-  <packaging>service/dataservice</packaging>
-  <name>SalesforceData</name>
-  <description>SalesforceData</description>
+  <packaging>synapse/endpoint</packaging>
+  <name>MongoAddAccount</name>
+  <description>MongoAddAccount</description>
   <repositories>
     <repository>
       <releases>
@@ -50,11 +50,11 @@
     <plugins>
       <plugin>
         <groupId>org.wso2.maven</groupId>
-        <artifactId>maven-dataservice-plugin</artifactId>
+        <artifactId>maven-endpoint-plugin</artifactId>
         <version>2.1.0</version>
         <extensions>true</extensions>
         <configuration>
-          <artifact>SalesforceData.dbs</artifact>
+          <artifact>MongoAddAccount.xml</artifact>
         </configuration>
       </plugin>
     </plugins>

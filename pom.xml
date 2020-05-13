@@ -9,9 +9,9 @@
   <name>Salesforce-Integration-Project</name>
   <description>Salesforce-Integration-Project</description>
   <modules>
-    <module>SalesforceDataService</module>
-    <module>SalesforceIntegrationConnectorExporter</module>
+  <module>SalesforceDataService</module>
     <module>SalesforceIntegration</module>
+    <module>SalesforceIntegrationConnectorExporter</module>
     <module>SalesforceIntegrationCompositeApplication</module>
   </modules>
   <build>

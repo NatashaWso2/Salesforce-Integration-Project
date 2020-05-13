@@ -10,5 +10,8 @@
   <description>SalesforceIntegration_module</description>
   <modules>
     <module>artifacts/sequence/handleSFData</module>
+    <module>artifacts/inbound-endpoint/SaleforceInboundEP</module>
+    <module>artifacts/endpoint/MongoDeleteAccount</module>
+    <module>artifacts/endpoint/MongoAddAccount</module>
   </modules>
 </project>
